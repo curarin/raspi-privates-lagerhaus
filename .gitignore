@@ -7,7 +7,8 @@ __pycache__/
 *.so
 
 # Secrets
-secrets.toml
+.streamlit/secrets.toml
+.streamlit/bq.json
 
 # Distribution / packaging
 .Python
