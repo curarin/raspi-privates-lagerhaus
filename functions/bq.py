@@ -34,4 +34,6 @@ def load_from_bq():
     FROM `adroit-medium-379911.privat_lagerbestand.lagerbestand_pi`
     """
     df = pd.read_gbq(query, project_id="adroit-medium-379911", credentials=credentials)
-    st.write(df)
+    st.session_state.my_dataframe = df
+    st.session_state.my_dataframe_received = True
+    return st.session_state.my_dataframe, st.session_state.my_dataframe_received
