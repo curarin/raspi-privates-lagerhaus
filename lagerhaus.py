@@ -12,7 +12,7 @@ st.set_page_config(
     layout="centered",
     page_title="Lagerhaus | MitschHerzog",
     initial_sidebar_state="collapsed", #collapsed
-    page_icon="🫙"
+    page_icon="🍽️"
 )
 st.title("🍽️ Lagerhaus | Mitsch&Herzog")
 st.write("Aktualisiere die Daten, indem du auf den Button drückst.")
