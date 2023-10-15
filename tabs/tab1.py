@@ -38,10 +38,10 @@ def tab1():
         st.session_state.filtered_df = st.session_state.filtered_df.reset_index(drop=True)
         st.dataframe(st.session_state.filtered_df)
 
-        st.session_state.category_sum = st.session_state.my_dataframe.groupby("category")["amount"].sum().reset_index()
-        st.session_state.category_sum['amount'] = st.session_state.category_sum['amount'].astype(int)
+        #st.session_state.category_sum = st.session_state.my_dataframe.groupby("category")["amount"].sum().reset_index()
+        #st.session_state.category_sum['amount'] = st.session_state.category_sum['amount'].astype(int)
 
 
         # Now you can use 'category' as the x-axis values in st.bar_chart
-        st.subheader("Übersicht aller Kategorien")
-        st.bar_chart(st.session_state.category_sum, x="category", y="amount")
+        #st.subheader("Übersicht aller Kategorien")
+        #st.bar_chart(st.session_state.category_sum, x="category", y="amount")
