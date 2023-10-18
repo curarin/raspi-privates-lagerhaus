@@ -17,7 +17,7 @@ if "category_sum" not in st.session_state:
     st.session_state.category_sum = None
 ######################################################
 
-def tab1():
+def tab1(my_dataframe):
     if st.session_state.my_dataframe_received == False:
         st.write("Nothing to see...")
     if st.session_state.my_dataframe_received == True:
