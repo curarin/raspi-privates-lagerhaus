@@ -23,9 +23,9 @@ def tab1():
     if st.session_state.my_dataframe_received == True:
 
         ### Filter Dataframe by Product Category
-        st.session_state.category = st.session_state.my_dataframe.groupby("category")["category"].apply(list).to_dict()
-        st.session_state.choices = st.selectbox("Kategorie", st.session_state.category)
-        st.session_state.filtered_df = st.session_state.my_dataframe[st.session_state.my_dataframe['category'] == st.session_state.choices]
+        category = st.session_state.my_dataframe.groupby("category")["category"].apply(list).to_dict() #hier
+        choices = ("Kategorie", category) #hier
+        filtered_df = st.session_state.my_dataframe[st.session_state.my_dataframe['category'] == choices] #hier
         columns_to_drop = ["barcode", "category", "date"]
         new_column_order = ["name", "quantity", "amount", "brand"]
         column_name_mapping = {"name": "Produkt Name",
@@ -33,7 +33,7 @@ def tab1():
                                "amount": "Anzahl",
                                "brand": "Marke"
                               }   
-        st.session_state.filtered_df = st.session_state.filtered_df.drop(columns=columns_to_drop)
-        st.session_state.filtered_df = st.session_state.filtered_df[new_column_order].rename(columns=column_name_mapping)
-        st.session_state.filtered_df = st.session_state.filtered_df.reset_index(drop=True)
-        st.dataframe(st.session_state.filtered_df)
+        filtered_df = filtered_df.drop(columns=columns_to_drop) #hier
+        filtered_df = filtered_df[new_column_order].rename(columns=column_name_mapping) #hier
+        filtered_df = filtered_df.reset_index(drop=True) #hier
+        st.dataframe(filtered_df) #hier
