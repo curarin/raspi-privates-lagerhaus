@@ -23,9 +23,9 @@ def tab1():
     if st.session_state.my_dataframe_received == True:
 
         ### Filter Dataframe by Product Category
-        category = st.session_state.my_dataframe.groupby("category")["category"].apply(list).to_dict() #hier
+        category = my_dataframe.groupby("category")["category"].apply(list).to_dict() #hier
         choices = ("Kategorie", category) #hier
-        filtered_df = st.session_state.my_dataframe[st.session_state.my_dataframe['category'] == choices] #hier
+        filtered_df = my_dataframe[my_dataframe['category'] == choices] #hier
         columns_to_drop = ["barcode", "category", "date"]
         new_column_order = ["name", "quantity", "amount", "brand"]
         column_name_mapping = {"name": "Produkt Name",

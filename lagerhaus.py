@@ -22,7 +22,7 @@ if "my_dataframe_received" not in st.session_state:
     st.session_state.my_dataframe_received = False
 
 if st.button("Jetzt Daten aktualisieren"):
-    st.session_state.my_dataframe, st.session_state.my_dataframe_received = bq.load_from_bq()
+    my_dataframe, st.session_state.my_dataframe_received = bq.load_from_bq()
 
 tab1, tab2 = st.tabs([
     "Wir haben...",
