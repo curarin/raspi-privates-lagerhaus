@@ -3,8 +3,6 @@ import functions.bq as bq
 import pandas as pd
 
 ### initialize session state stuff
-if 'my_dataframe' not in st.session_state:
-    st.session_state.my_dataframe = None
 if "choices" not in st.session_state:
     st.session_state.choices = []
 if "category" not in st.session_state:
