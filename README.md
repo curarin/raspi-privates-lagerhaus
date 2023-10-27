@@ -1,5 +1,5 @@
 # raspi-privates-lagerhaus
- Dashboard für Bestandsaufnahme des eigenen Lebensmittels-Lagerhauses.
+Dashboard for inventory of own food warehouse.
 
 ## Why?
 Our home has a cellar where we store longer-lasting food. When I stand in the kitchen and cook, it can happen that the flour has run out. So that I don't have to go to the cellar "on the off chance" to check whether there is still flour in stock, I would like to check the stock level in a web app on my cell phone.
